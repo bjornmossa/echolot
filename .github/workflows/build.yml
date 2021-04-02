@@ -1,0 +1,19 @@
+name: Build artifacts for Linux
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Faust compiler
+        run: |
+          git clone https://github.com/grame-cncm/faust.git,
+          cd faust,
+          git submodule update --init,
+          make,
+          make install,
