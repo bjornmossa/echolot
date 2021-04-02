@@ -12,8 +12,8 @@ jobs:
 
       - name: Install Faust compiler
         run: |
-          git clone https://github.com/grame-cncm/faust.git,
-          cd faust,
-          git submodule update --init,
-          make,
-          make install,
+          git clone https://github.com/grame-cncm/faust.git
+          cd faust
+          git submodule update --init
+          make
+          make install
